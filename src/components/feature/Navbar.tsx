@@ -3,17 +3,10 @@ import { Link, useLocation } from "react-router-dom";
 import { useCart } from "@/hooks/useCart";
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
   const { count } = useCart();
   const isHome = location.pathname === "/";
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   useEffect(() => {
     setMobileOpen(false);
@@ -22,7 +15,7 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className="fixed top-0 left-0 right-0 z-50 bg-background-50/95 backdrop-blur-md shadow-[0_1px_0_0_rgba(0,0,0,0.05)] transition-all duration-500"
+        className="fixed top-0 left-0 right-0 z-50 bg-background-50 shadow-[0_1px_0_0_rgba(0,0,0,0.08)]"
       >
         <div className="flex items-center justify-between px-6 md:px-10 h-16 md:h-20">
           {isHome ? (
