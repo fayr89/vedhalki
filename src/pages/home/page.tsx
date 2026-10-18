@@ -57,7 +57,7 @@ export default function Home() {
               src="/hero.jpg"
               alt="Строгая геометрия для интерьера — напольные вешалки Напольная-вешалка.рф"
               title="Напольная-вешалка.рф — собственное производство, сканди стиль"
-              className="w-full aspect-[21/9] md:aspect-[21/8] object-cover object-center block"
+              className="w-full h-[85vh] md:h-screen max-h-[1000px] object-cover object-center block"
               width={1456}
               height={780}
             />
