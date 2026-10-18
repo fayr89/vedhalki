@@ -52,12 +52,12 @@ export default function Home() {
       <Navbar />
       <main>
         <section className="relative overflow-hidden bg-background-50">
-          <Link to="/catalog" aria-label="Перейти к каталогу" className="block w-full">
+          <Link to="/catalog" aria-label="Перейти к каталогу" className="block">
             <img
               src="/hero.jpg"
               alt="Строгая геометрия для интерьера — напольные вешалки Напольная-вешалка.рф"
               title="Напольная-вешалка.рф — собственное производство, сканди стиль"
-              className="w-full h-[85vh] md:h-screen max-h-[1000px] object-cover object-center block"
+              className="w-full h-auto block"
               width={1456}
               height={780}
             />
