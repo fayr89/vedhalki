@@ -22,11 +22,7 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled
-            ? "bg-background-50/95 backdrop-blur-md shadow-[0_1px_0_0_rgba(0,0,0,0.05)]"
-            : "bg-transparent"
-        }`}
+        className="fixed top-0 left-0 right-0 z-50 bg-background-50/95 backdrop-blur-md shadow-[0_1px_0_0_rgba(0,0,0,0.05)] transition-all duration-500"
       >
         <div className="flex items-center justify-between px-6 md:px-10 h-16 md:h-20">
           {isHome ? (

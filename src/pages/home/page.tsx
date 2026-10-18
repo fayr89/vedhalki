@@ -50,7 +50,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main>
+      <main className="pt-16 md:pt-20">
         <section className="relative overflow-hidden bg-background-50">
           <Link to="/catalog" aria-label="Перейти к каталогу" className="block">
             <img
