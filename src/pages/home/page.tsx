@@ -102,45 +102,47 @@ export default function Home() {
         </section>
 
         <section className="bg-background-100 px-6 md:px-10 py-14 md:py-24">
-          <div className="max-w-[1400px] mx-auto">
-            <p className="font-label text-xs tracking-[0.15em] uppercase text-foreground-400 mb-3 text-center">
-              Преимущества
-            </p>
-            <h2 className="font-heading text-2xl md:text-4xl font-medium text-foreground-950 text-center mb-12 md:mb-16">
-              Почему выбирают <strong>Напольная-вешалка.рф</strong>
+          <div className="max-w-[1200px] mx-auto">
+            <h2 className="font-heading text-2xl md:text-4xl font-medium text-foreground-950 text-center mb-12 md:mb-16 uppercase tracking-wide">
+              Почему выбирают наши металлические вешалки?
             </h2>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8">
               {[
                 {
+                  icon: "ri-tools-line",
+                  title: "Собственное производство",
+                  text: "Производим напольные вешалки сами, на российском заводе. Полный контроль качества на каждом этапе — от металла до упаковки.",
+                },
+                {
+                  icon: "ri-brush-4-line",
+                  title: "Порошковая покраска",
+                  text: "Покраска в собственном цехе. Прочный матовый финиш, который не царапается и не выгорает со временем.",
+                },
+                {
                   icon: "ri-shield-check-line",
-                  title: "Гарантия 2 года",
-                  text: "Каждая <strong>напольная вешалка</strong> проходит строгий контроль качества и имеет расширенную гарантию.",
-                },
-                {
-                  icon: "ri-truck-line",
-                  title: "Быстрая доставка",
-                  text: "Доставляем <strong>напольные вешалки</strong> по всей России. Бесплатно при заказе от 7 000 ₽.",
-                },
-                {
-                  icon: "ri-palette-line",
-                  title: "Дизайн премиум",
-                  text: "Сотрудничаем с европейскими дизайнерами для создания уникальных моделей <strong>стоек для одежды</strong>.",
-                },
-                {
-                  icon: "ri-recycle-line",
-                  title: "Эко-материалы",
-                  text: "Используем переработанную сталь и сертифицированную древесину для <strong>дизайнерских вешалок</strong>.",
+                  title: "Надёжность и прочность",
+                  text: "Усиленный стальной каркас выдерживает до 40 кг. Устойчивое основание — вешалка не падает и не прогибается.",
                 },
               ].map((item, i) => (
-                <div key={i} className="text-center">
-                  <div className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center mx-auto mb-5 text-foreground-800">
-                    <i className={`${item.icon} text-2xl md:text-3xl`}></i>
+                <div
+                  key={i}
+                  className="relative bg-background-50 border border-background-200 p-7 md:p-9 rounded-xl shadow-[0_1px_2px_rgba(0,0,0,0.03)]"
+                >
+                  <span className="absolute top-5 right-6 font-label text-sm text-foreground-300">
+                    {i + 1}
+                  </span>
+
+                  <div className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center mb-8 md:mb-10 text-foreground-900">
+                    <i className={`${item.icon} text-5xl md:text-6xl`}></i>
                   </div>
-                  <h3 className="font-heading text-lg font-medium text-foreground-950 mb-2">
+
+                  <h3 className="font-heading text-xl md:text-2xl font-medium text-foreground-950 mb-4 leading-tight">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-foreground-600 leading-relaxed" dangerouslySetInnerHTML={{ __html: item.text }}></p>
+                  <p className="text-sm md:text-base text-foreground-600 leading-relaxed">
+                    {item.text}
+                  </p>
                 </div>
               ))}
             </div>
