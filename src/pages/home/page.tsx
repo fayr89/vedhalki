@@ -51,33 +51,17 @@ export default function Home() {
     <>
       <Navbar />
       <main>
-        <section className="relative h-[420px] md:h-[600px] flex items-center justify-center overflow-hidden">
-          <img
-            src="https://readdy.ai/api/search-image?query=Single%20elegant%20black%20minimalist%20floor%20clothes%20rack%20centered%20on%20pure%20white%20studio%20background%20sharp%20lines%20high%20contrast%20monochrome%20professional%20product%20photography%20clean%20composition%20no%20clutter%20no%20plants%20sharp%20focus&width=1600&height=900&seq=hero-bg-02&orientation=landscape&nocache=true"
-            alt="Напольная-вешалка.рф — напольные вешалки"
-            title="Напольная-вешалка.рф — дизайнерские напольные вешалки и стойки для одежды"
-            className="absolute inset-0 w-full h-full object-cover object-top"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/40"></div>
-
-          <div className="relative z-10 text-center px-6 w-full">
-            <h2 className="font-heading text-3xl md:text-5xl lg:text-6xl font-light text-white leading-tight tracking-wide">
-              Форма.
-              <br />
-              Функция.
-              <br />
-              Стиль.
-            </h2>
-            <p className="mt-6 md:mt-8 text-sm md:text-base text-white/80 font-label tracking-wider max-w-md mx-auto leading-relaxed">
-              <strong>Дизайнерские напольные вешалки</strong> и стойки для одежды. Минимализм, который работает.
-            </p>
-            <Link
-              to="/catalog"
-              className="mt-8 md:mt-10 inline-block px-8 py-3.5 bg-white text-foreground-950 font-label text-xs tracking-[0.15em] uppercase hover:bg-background-100 transition-colors whitespace-nowrap"
-            >
-              Смотреть каталог
-            </Link>
-          </div>
+        <section className="relative overflow-hidden bg-background-50">
+          <Link to="/catalog" aria-label="Перейти к каталогу" className="block">
+            <img
+              src="/hero.jpg"
+              alt="Строгая геометрия для интерьера — напольные вешалки Напольная-вешалка.рф"
+              title="Напольная-вешалка.рф — собственное производство, сканди стиль"
+              className="w-full h-auto block"
+              width={1456}
+              height={780}
+            />
+          </Link>
         </section>
 
         <section className="px-6 md:px-10 py-14 md:py-24">
